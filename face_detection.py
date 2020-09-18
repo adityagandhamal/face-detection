@@ -5,7 +5,7 @@ import numpy as np
 face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
 # Loading image and converting to grayscale
-img = cv2.imread("messi5.jpg")
+img = cv2.imread("./Data/messi5.jpg")
 gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 # Face Detection
