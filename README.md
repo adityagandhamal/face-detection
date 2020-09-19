@@ -19,7 +19,7 @@
  
  2. Install Python 3.6 or greater `pip install python`
  
- 3. Intsall OpenCV for Python `pip install opencv-python`. This package includes numpy too.
+ 3. Intsall OpenCV for Python `pip install opencv-python`. This package includes Numpy too.
  
  4. Go to the directory of this repo cloned onto your local machine and open cmd.
  
