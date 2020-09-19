@@ -11,18 +11,23 @@ model = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
 while cap.isOpened():
     _, frame = cap.read()
+    
+    try:
+        gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        faces = model.detectMultiScale(gray_frame, 1.1, 10)
 
-    gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    faces = model.detectMultiScale(gray_frame, 1.1, 10)
+        for x, y, w, h in faces:
+            cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
 
-    for x, y, w, h in faces:
-        cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+        saved_frame.write(frame)
+        cv2.imshow("frame", frame)
 
-    saved_frame.write(frame)
-    cv2.imshow("frame", frame)
-
-    if cv2.waitKey(1) & 0xFF == 27:
+        if cv2.waitKey(1) & 0xFF == 27:
+            break
+    
+    except Exception:
         break
+
 
 cap.release()
 cv2.destroyAllWindows()
