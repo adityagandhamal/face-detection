@@ -23,7 +23,7 @@
  
  4. Go to the directory of this repo cloned onto your local machine and open cmd.
  
- 5. Run the python files of your choice by typing the file name in the cmd as face_detection.py or face_detection_on_vid.py
+ 5. Run the python files of your choice by typing the file name in the cmd as `face_detection.py` or `face_detection_on_vid.py`
  
 ### You can try this project to detect your own face through your webcam by following these steps:
   1. Open file face_detection_on_vid.py in any Python editor of your choice
