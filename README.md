@@ -30,6 +30,6 @@
   
   2. Go to line 4 of the python script which reads `cap = cv2.VideoCapture("./Data/Megamind.avi")`
   
-  3. Replace the argument specified as `"./Data/Megamind.avi"` to `0`
+  3. Replace the argument specified as `"./Data/Megamind.avi"` with `0`
   
   4. Save the file and run it.
